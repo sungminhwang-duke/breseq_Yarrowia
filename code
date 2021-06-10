@@ -16,8 +16,6 @@
 # (done) breseq -p -r GCA_001761485.1_ASM176148v1_genomic.gbff 7-1_1_val_1.fq 7-1_2_val_2.fq -o breseq_output_7-1    #took 6h 41m
 # (done) breseq -p -r GCA_001761485.1_ASM176148v1_genomic.gbff 51_1_val_1.fq 51_2_val_2.fq -o breseq_output_51       #took 5h 38m
 
-#for f1 in *1_val_1.fq ; do for f2 in ${f1%%_1_val_1.fq}"_2_val_2.fq" ; do breseq -p -r GCA_001761485.1_ASM176148v1_genomic.gbff $f1 $f2 -o $f1.output ; done; done
-
 
 ### Identify the genomic differences by comparing each genome in R (v 4.1.0)
 library(dplyr)
