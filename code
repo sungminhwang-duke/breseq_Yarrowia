@@ -1,6 +1,6 @@
 ### Whole genome sequencing data analysis ###
 
-### Quality check for the sequencing data
+### Quality check for the sequencing data in Terminal
 # gunzip *.gz
 # trim_galore -o ./trimming *.fastq --paired --fastqc --illumina
 
@@ -11,7 +11,7 @@
 #      Repeat feature must have only one location: YalifMp02
 #      Please rename the duplicates so that they have unique locus_tags & names, e.g., gene_1 and gene_2
 
-### Run breseq by manual
+### Run breseq by manual in Terminal
 # (done) breseq -p -r GCA_001761485.1_ASM176148v1_genomic.gbff Ctrl_1_val_1.fq Ctrl_2_val_2.fq -o breseq_output      #took 3h 10m
 # (done) breseq -p -r GCA_001761485.1_ASM176148v1_genomic.gbff 7-1_1_val_1.fq 7-1_2_val_2.fq -o breseq_output_7-1    #took 6h 41m
 # (done) breseq -p -r GCA_001761485.1_ASM176148v1_genomic.gbff 51_1_val_1.fq 51_2_val_2.fq -o breseq_output_51       #took 5h 38m
@@ -19,7 +19,7 @@
 #for f1 in *1_val_1.fq ; do for f2 in ${f1%%_1_val_1.fq}"_2_val_2.fq" ; do breseq -p -r GCA_001761485.1_ASM176148v1_genomic.gbff $f1 $f2 -o $f1.output ; done; done
 
 
-### Identify the genomic differences by comparing each genome
+### Identify the genomic differences by comparing each genome in R (v 4.1.0)
 library(dplyr)
 library(tidyverse)
 
